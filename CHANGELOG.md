@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.6.1 - 2026-10-06
+
+Data-only patch. No card fields change.
+
+- `data/tarot_data_v1.6.1.json` - deck 4.6.1, schema 1.6.1. Adds `deck_metadata.changelog_1_6_1`.
+- Queen of Wands astrology `Leo` -> `Aries` and King of Wands `Aries` -> `Leo`, matching the
+  Golden Dawn attributions already used for the Cups, Swords and Pentacles courts.
+- `data/tarot_data_v1.6.json` is retained as a backward-compatibility fixture.
+
 ## v1.6 - 2026-10-06
 
 Folds the useful parts of the older Divine Insight Dictionary 2.0 (from `mal494/tarot_game`)

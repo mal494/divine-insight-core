@@ -10,8 +10,9 @@ repo is public so those branches can fetch a release at build time without a tok
 
 ```
 data/
-  tarot_data_v1.6.json   # current dataset (deck 4.6, schema 1.6)
-  tarot_data_v1.5.json   # previous dataset, kept as a backward-compatibility fixture
+  tarot_data_v1.6.1.json # current dataset (deck 4.6.1, schema 1.6.1)
+  tarot_data_v1.6.json   # previous dataset, kept as a backward-compatibility fixture
+  tarot_data_v1.5.json   # older dataset, kept as a backward-compatibility fixture
   tarot_data_v1.4.json   # older dataset, kept as a backward-compatibility fixture
 academy/                 # Academy plan: curriculum for learning to read tarot
 shop/                    # Shop plan: decks, merch and digital goods
@@ -20,6 +21,9 @@ shop/                    # Shop plan: decks, merch and digital goods
 Academy and Shop live here as plans until either has running code of its own.
 
 ## Schema
+
+Schema 1.6.1 is a data-only patch on 1.6: no card fields change. It swaps the Queen and
+King of Wands astrology to the Golden Dawn attributions.
 
 Schema 1.6 adds one card field, `short_description`, and fixes astrology on the court
 cards and Aces. Readers that ignore unknown fields load 1.6 unchanged, and v1.5 and
@@ -32,7 +36,7 @@ upright and reversed meanings, `elemental_weight`, `positional_weights`,
 
 ## How branches consume Core
 
-1. Core publishes a tagged release (currently `v1.6`) containing the dataset files.
+1. Core publishes a tagged release (currently `v1.6.1`) containing the dataset files.
 2. Each branch pins a Core version in a `core.version` file and documents the
    dependency in its own `CORE.md`.
 3. When Core ships a new version, each branch upgrades deliberately.
