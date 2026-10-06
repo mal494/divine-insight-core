@@ -20,7 +20,9 @@
       "upright and reversed descriptions expanded to 2 sentences",
       "each meaning now has 4-5 keywords (all original keywords kept)"
     ],
-    "changelog_1_6": []
+    "changelog_1_6": [
+      "astrology corrected on 20 cards: the 12 Wands, Swords and Pentacles court cards held their element pair (e.g. 'Air/Fire') instead of a sign and are restored from the Divine Insight Dictionary 2.0; the four Aces now list their three signs instead of '<Element> Signs'; the four Cups court cards use Golden Dawn attributions (Page: Water Signs, Knight: Pisces, Queen: Cancer, King: Scorpio)"
+    ]
   },
   "taxonomy": {
     "version": "1.1",
@@ -1429,7 +1431,7 @@
       "suit": "Wands",
       "element": "Fire",
       "elemental_weight": 1.0,
-      "astrology": "Fire Signs",
+      "astrology": "Aries / Leo / Sagittarius",
       "tags": [
         "innovation",
         "initiative",
@@ -2014,7 +2016,7 @@
       "suit": "Wands",
       "element": "Earth/Fire",
       "elemental_weight": 0.75,
-      "astrology": "Earth/Fire",
+      "astrology": "Fire Signs",
       "tags": [
         "news",
         "youth",
@@ -2072,7 +2074,7 @@
       "suit": "Wands",
       "element": "Air/Fire",
       "elemental_weight": 0.75,
-      "astrology": "Air/Fire",
+      "astrology": "Sagittarius",
       "tags": [
         "action",
         "risk",
@@ -2130,7 +2132,7 @@
       "suit": "Wands",
       "element": "Water/Fire",
       "elemental_weight": 0.75,
-      "astrology": "Water/Fire",
+      "astrology": "Leo",
       "tags": [
         "charisma",
         "leadership",
@@ -2188,7 +2190,7 @@
       "suit": "Wands",
       "element": "Fire/Fire",
       "elemental_weight": 1.0,
-      "astrology": "Fire/Fire",
+      "astrology": "Aries",
       "tags": [
         "vision",
         "entrepreneur",
@@ -2246,7 +2248,7 @@
       "suit": "Cups",
       "element": "Water",
       "elemental_weight": 1.0,
-      "astrology": "Water Signs",
+      "astrology": "Cancer / Scorpio / Pisces",
       "tags": [
         "love",
         "intuition",
@@ -2841,7 +2843,7 @@
       "suit": "Cups",
       "element": "Earth/Water",
       "elemental_weight": 0.75,
-      "astrology": "Earth/Water",
+      "astrology": "Water Signs",
       "tags": [
         "intuition",
         "messages",
@@ -2901,7 +2903,7 @@
       "suit": "Cups",
       "element": "Air/Water",
       "elemental_weight": 0.75,
-      "astrology": "Air/Water",
+      "astrology": "Pisces",
       "tags": [
         "romance",
         "charm",
@@ -2961,7 +2963,7 @@
       "suit": "Cups",
       "element": "Water/Water",
       "elemental_weight": 1.0,
-      "astrology": "Water/Water",
+      "astrology": "Cancer",
       "tags": [
         "compassion",
         "healing",
@@ -3021,7 +3023,7 @@
       "suit": "Cups",
       "element": "Fire/Water",
       "elemental_weight": 0.75,
-      "astrology": "Fire/Water",
+      "astrology": "Scorpio",
       "tags": [
         "balance",
         "diplomacy",
@@ -3081,7 +3083,7 @@
       "suit": "Swords",
       "element": "Air",
       "elemental_weight": 1.0,
-      "astrology": "Air Signs",
+      "astrology": "Gemini / Libra / Aquarius",
       "tags": [
         "truth",
         "clarity",
@@ -3666,7 +3668,7 @@
       "suit": "Swords",
       "element": "Earth/Air",
       "elemental_weight": 0.75,
-      "astrology": "Earth/Air",
+      "astrology": "Air Signs",
       "tags": [
         "curiosity",
         "communication",
@@ -3725,7 +3727,7 @@
       "suit": "Swords",
       "element": "Air/Air",
       "elemental_weight": 1.0,
-      "astrology": "Air/Air",
+      "astrology": "Gemini",
       "tags": [
         "action",
         "ambition",
@@ -3783,7 +3785,7 @@
       "suit": "Swords",
       "element": "Water/Air",
       "elemental_weight": 0.75,
-      "astrology": "Water/Air",
+      "astrology": "Libra",
       "tags": [
         "clarity",
         "independence",
@@ -3841,7 +3843,7 @@
       "suit": "Swords",
       "element": "Fire/Air",
       "elemental_weight": 0.75,
-      "astrology": "Fire/Air",
+      "astrology": "Aquarius",
       "tags": [
         "authority",
         "intellect",
@@ -3899,7 +3901,7 @@
       "suit": "Pentacles",
       "element": "Earth",
       "elemental_weight": 1.0,
-      "astrology": "Earth Signs",
+      "astrology": "Taurus / Virgo / Capricorn",
       "tags": [
         "opportunity",
         "manifestation",
@@ -4480,7 +4482,7 @@
       "suit": "Pentacles",
       "element": "Earth/Earth",
       "elemental_weight": 1.0,
-      "astrology": "Earth/Earth",
+      "astrology": "Earth Signs",
       "tags": [
         "manifestation",
         "study",
@@ -4538,7 +4540,7 @@
       "suit": "Pentacles",
       "element": "Air/Earth",
       "elemental_weight": 0.75,
-      "astrology": "Air/Earth",
+      "astrology": "Virgo",
       "tags": [
         "routine",
         "reliability",
@@ -4596,7 +4598,7 @@
       "suit": "Pentacles",
       "element": "Water/Earth",
       "elemental_weight": 0.75,
-      "astrology": "Water/Earth",
+      "astrology": "Capricorn",
       "tags": [
         "nurturing",
         "security",
@@ -4654,7 +4656,7 @@
       "suit": "Pentacles",
       "element": "Fire/Earth",
       "elemental_weight": 0.75,
-      "astrology": "Fire/Earth",
+      "astrology": "Taurus",
       "tags": [
         "abundance",
         "leadership",
