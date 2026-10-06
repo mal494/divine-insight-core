@@ -21,7 +21,8 @@
       "each meaning now has 4-5 keywords (all original keywords kept)"
     ],
     "changelog_1_6": [
-      "astrology corrected on 20 cards: the 12 Wands, Swords and Pentacles court cards held their element pair (e.g. 'Air/Fire') instead of a sign and are restored from the Divine Insight Dictionary 2.0; the four Aces now list their three signs instead of '<Element> Signs'; the four Cups court cards use Golden Dawn attributions (Page: Water Signs, Knight: Pisces, Queen: Cancer, King: Scorpio)"
+      "astrology corrected on 20 cards: the 12 Wands, Swords and Pentacles court cards held their element pair (e.g. 'Air/Fire') instead of a sign and are restored from the Divine Insight Dictionary 2.0; the four Aces now list their three signs instead of '<Element> Signs'; the four Cups court cards use Golden Dawn attributions (Page: Water Signs, Knight: Pisces, Queen: Cancer, King: Scorpio)",
+      "tags merged with the Divine Insight Dictionary 2.0 tag lists (union, lowercased, de-duplicated, ASCII hyphens); no existing tag removed"
     ]
   },
   "taxonomy": {
@@ -828,7 +829,9 @@
       "tags": [
         "waiting",
         "sacrifice",
-        "perspective"
+        "perspective",
+        "pause",
+        "surrender"
       ],
       "life_domains": [
         "Personal Growth",
@@ -889,7 +892,8 @@
         "transformation",
         "endings",
         "rebirth",
-        "change"
+        "change",
+        "ending"
       ],
       "life_domains": [
         "Life Cycles",
@@ -949,7 +953,9 @@
         "health",
         "alchemy",
         "peace",
-        "moderation"
+        "moderation",
+        "balance",
+        "healing"
       ],
       "life_domains": [
         "Health",
@@ -1010,7 +1016,10 @@
         "addiction",
         "materialism",
         "obsession",
-        "fear"
+        "fear",
+        "temptation",
+        "shadow",
+        "attachment"
       ],
       "life_domains": [
         "Mental Health",
@@ -1071,7 +1080,9 @@
         "shock",
         "chaos",
         "revelation",
-        "breakthrough"
+        "breakthrough",
+        "upheaval",
+        "collapse"
       ],
       "life_domains": [
         "Home",
@@ -1132,7 +1143,8 @@
         "healing",
         "hope",
         "inspiration",
-        "peace"
+        "peace",
+        "guidance"
       ],
       "life_domains": [
         "Spirituality",
@@ -1193,7 +1205,10 @@
         "anxiety",
         "dreams",
         "subconscious",
-        "mystery"
+        "mystery",
+        "illusion",
+        "intuition",
+        "fear"
       ],
       "life_domains": [
         "Mental Health",
@@ -1314,7 +1329,8 @@
         "evaluation",
         "calling",
         "awakening",
-        "absolution"
+        "absolution",
+        "reckoning"
       ],
       "life_domains": [
         "Career",
@@ -1375,7 +1391,8 @@
         "travel",
         "completion",
         "wholeness",
-        "success"
+        "success",
+        "achievement"
       ],
       "life_domains": [
         "Career",
@@ -1435,7 +1452,9 @@
       "tags": [
         "innovation",
         "initiative",
-        "passion"
+        "passion",
+        "inspiration",
+        "spark"
       ],
       "life_domains": [
         "Career",
@@ -1494,7 +1513,9 @@
       "tags": [
         "planning",
         "decisions",
-        "expansion"
+        "expansion",
+        "vision",
+        "choice"
       ],
       "life_domains": [
         "Career",
@@ -1553,7 +1574,10 @@
       "tags": [
         "foresight",
         "trade",
-        "growth"
+        "growth",
+        "progress",
+        "expansion",
+        "momentum"
       ],
       "life_domains": [
         "Career",
@@ -1671,7 +1695,8 @@
       "tags": [
         "conflict",
         "competition",
-        "rivalry"
+        "rivalry",
+        "chaos"
       ],
       "life_domains": [
         "Career",
@@ -1788,7 +1813,9 @@
       "tags": [
         "defense",
         "boundaries",
-        "perseverance"
+        "perseverance",
+        "resilience",
+        "challenge"
       ],
       "life_domains": [
         "Career",
@@ -1904,7 +1931,10 @@
       "tags": [
         "resilience",
         "stamina",
-        "exhaustion"
+        "exhaustion",
+        "endurance",
+        "fatigue",
+        "persistence"
       ],
       "life_domains": [
         "Health",
@@ -1962,7 +1992,8 @@
       "tags": [
         "burden",
         "responsibility",
-        "stress"
+        "stress",
+        "overload"
       ],
       "life_domains": [
         "Career",
@@ -2020,7 +2051,10 @@
       "tags": [
         "news",
         "youth",
-        "discovery"
+        "discovery",
+        "exploration",
+        "curiosity",
+        "enthusiasm"
       ],
       "life_domains": [
         "Education",
@@ -2078,7 +2112,8 @@
       "tags": [
         "action",
         "risk",
-        "adventure"
+        "adventure",
+        "impulse"
       ],
       "life_domains": [
         "Travel",
@@ -2194,7 +2229,8 @@
       "tags": [
         "vision",
         "entrepreneur",
-        "authority"
+        "authority",
+        "leadership"
       ],
       "life_domains": [
         "Career",
@@ -2252,7 +2288,8 @@
       "tags": [
         "love",
         "intuition",
-        "healing"
+        "healing",
+        "emotion"
       ],
       "life_domains": [
         "Love",
@@ -2310,7 +2347,8 @@
       "tags": [
         "partnership",
         "union",
-        "attraction"
+        "attraction",
+        "connection"
       ],
       "life_domains": [
         "Love",
@@ -2426,7 +2464,9 @@
       "tags": [
         "apathy",
         "contemplation",
-        "boredom"
+        "boredom",
+        "withdrawal",
+        "reflection"
       ],
       "life_domains": [
         "Mental Health",
@@ -2546,7 +2586,8 @@
       "tags": [
         "nostalgia",
         "childhood",
-        "innocence"
+        "innocence",
+        "memory"
       ],
       "life_domains": [
         "Family",
@@ -2666,7 +2707,9 @@
       "tags": [
         "walking away",
         "search",
-        "abandonment"
+        "abandonment",
+        "departure",
+        "transition"
       ],
       "life_domains": [
         "Travel",
@@ -2727,7 +2770,9 @@
       "tags": [
         "contentment",
         "wishes",
-        "satisfaction"
+        "satisfaction",
+        "gratitude",
+        "wish"
       ],
       "life_domains": [
         "Finance",
@@ -2787,7 +2832,8 @@
       "tags": [
         "family",
         "harmony",
-        "bliss"
+        "bliss",
+        "fulfillment"
       ],
       "life_domains": [
         "Family",
@@ -3147,7 +3193,8 @@
       "tags": [
         "stalemate",
         "indecision",
-        "denial"
+        "denial",
+        "balance"
       ],
       "life_domains": [
         "Relationships",
@@ -3207,7 +3254,9 @@
       "tags": [
         "heartbreak",
         "grief",
-        "betrayal"
+        "betrayal",
+        "pain",
+        "truth"
       ],
       "life_domains": [
         "Love",
@@ -3265,7 +3314,8 @@
       "tags": [
         "rest",
         "meditation",
-        "recovery"
+        "recovery",
+        "pause"
       ],
       "life_domains": [
         "Health",
@@ -3323,7 +3373,8 @@
       "tags": [
         "conflict",
         "defeat",
-        "hostility"
+        "hostility",
+        "ego"
       ],
       "life_domains": [
         "Relationships",
@@ -3381,7 +3432,9 @@
       "tags": [
         "transition",
         "travel",
-        "moving on"
+        "moving on",
+        "healing",
+        "movement"
       ],
       "life_domains": [
         "Travel",
@@ -3439,7 +3492,8 @@
       "tags": [
         "strategy",
         "deception",
-        "secrets"
+        "secrets",
+        "secrecy"
       ],
       "life_domains": [
         "Career",
@@ -3498,7 +3552,10 @@
       "tags": [
         "entrapment",
         "anxiety",
-        "victim"
+        "victim",
+        "restriction",
+        "fear",
+        "limitation"
       ],
       "life_domains": [
         "Mental Health",
@@ -3556,7 +3613,8 @@
       "tags": [
         "nightmares",
         "fear",
-        "anxiety"
+        "anxiety",
+        "worry"
       ],
       "life_domains": [
         "Mental Health",
@@ -3614,7 +3672,10 @@
       "tags": [
         "rock bottom",
         "betrayal",
-        "endings"
+        "endings",
+        "ending",
+        "collapse",
+        "finality"
       ],
       "life_domains": [
         "Career",
@@ -3672,7 +3733,8 @@
       "tags": [
         "curiosity",
         "communication",
-        "vigilance"
+        "vigilance",
+        "ideas"
       ],
       "life_domains": [
         "Education",
@@ -3731,7 +3793,9 @@
       "tags": [
         "action",
         "ambition",
-        "directness"
+        "directness",
+        "determination",
+        "focus"
       ],
       "life_domains": [
         "Career",
@@ -3789,7 +3853,8 @@
       "tags": [
         "clarity",
         "independence",
-        "boundaries"
+        "boundaries",
+        "discernment"
       ],
       "life_domains": [
         "Relationships",
@@ -3847,7 +3912,9 @@
       "tags": [
         "authority",
         "intellect",
-        "justice"
+        "justice",
+        "logic",
+        "truth"
       ],
       "life_domains": [
         "Career",
@@ -3905,7 +3972,9 @@
       "tags": [
         "opportunity",
         "manifestation",
-        "wealth"
+        "wealth",
+        "prosperity",
+        "foundation"
       ],
       "life_domains": [
         "Finance",
@@ -3963,7 +4032,9 @@
       "tags": [
         "balance",
         "adaptability",
-        "time management"
+        "time management",
+        "adaptation",
+        "flexibility"
       ],
       "life_domains": [
         "Finance",
@@ -4080,7 +4151,9 @@
       "tags": [
         "conservation",
         "security",
-        "possessiveness"
+        "possessiveness",
+        "control",
+        "possession"
       ],
       "life_domains": [
         "Finance",
@@ -4196,7 +4269,9 @@
       "tags": [
         "generosity",
         "charity",
-        "sharing"
+        "sharing",
+        "exchange",
+        "support"
       ],
       "life_domains": [
         "Finance",
@@ -4254,7 +4329,9 @@
       "tags": [
         "investment",
         "patience",
-        "evaluation"
+        "evaluation",
+        "assessment",
+        "growth"
       ],
       "life_domains": [
         "Career",
@@ -4312,7 +4389,9 @@
       "tags": [
         "apprenticeship",
         "mastery",
-        "craft"
+        "craft",
+        "skill",
+        "dedication"
       ],
       "life_domains": [
         "Career",
@@ -4428,7 +4507,9 @@
       "tags": [
         "legacy",
         "inheritance",
-        "tradition"
+        "tradition",
+        "wealth",
+        "family"
       ],
       "life_domains": [
         "Family",
@@ -4486,7 +4567,9 @@
       "tags": [
         "manifestation",
         "study",
-        "new job"
+        "new job",
+        "opportunity",
+        "focus"
       ],
       "life_domains": [
         "Career",
@@ -4544,7 +4627,8 @@
       "tags": [
         "routine",
         "reliability",
-        "hard work"
+        "hard work",
+        "discipline"
       ],
       "life_domains": [
         "Career",
@@ -4602,7 +4686,9 @@
       "tags": [
         "nurturing",
         "security",
-        "practicality"
+        "practicality",
+        "stability",
+        "comfort"
       ],
       "life_domains": [
         "Family",
@@ -4660,7 +4746,9 @@
       "tags": [
         "abundance",
         "leadership",
-        "mastery"
+        "mastery",
+        "prosperity",
+        "stability"
       ],
       "life_domains": [
         "Career",
