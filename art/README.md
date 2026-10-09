@@ -4,7 +4,7 @@ The Rider-Waite-Smith deck (Pamela Colman Smith, 1909) is public domain and is
 the platform's artwork source. The images themselves are not committed here yet;
 they live in Drive under `rider-waite/` in three sizes:
 
-```
+```text
 full/    high-res JPG, ~3 MB per card - print and Shop products
 720px/   ~300 KB per card - web and app faces
 gif/     animated variants

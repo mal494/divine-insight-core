@@ -8,7 +8,7 @@ repo is public so those branches can fetch a release at build time without a tok
 
 ## What's here
 
-```
+```text
 data/
   tarot_data_v1.6.1.json # current dataset (deck 4.6.1, schema 1.6.1)
   tarot_data_v1.6.json   # previous dataset, kept as a backward-compatibility fixture
