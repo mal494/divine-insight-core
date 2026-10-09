@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment / secrets — Core is data + docs only, never commit keys
+.env
+.env.local
+
+# Editor / tooling scratch
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Local experiment dumps (e.g. legacy scratch datasets) — not part of a release
+/*-optimized.json
+/*-scratch.json
