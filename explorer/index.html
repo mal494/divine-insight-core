@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divine Insight Core — Card Explorer</title>
+  <meta name="description" content="Browse the complete Divine Insight tarot dataset: search all 78 cards, filter by arcana and suit, and read full upright and reversed meanings." />
+  <meta name="theme-color" content="#0a0a18" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <a class="brand" href="https://github.com/mal494/divine-insight-core" target="_blank" rel="noopener">
+      <span class="brand-mark">✦</span>
+      <span class="brand-name">Divine Insight Core</span>
+    </a>
+    <span class="version-badge" id="versionBadge">loading dataset…</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">The canonical dataset</p>
+      <h1>Card <em>Explorer</em></h1>
+      <p class="lede">Every card in the Divine Insight canon — searchable, filterable, and readable in full. This page loads the versioned dataset directly, the same file every platform branch consumes.</p>
+      <div class="stats" id="stats" aria-label="Dataset statistics"></div>
+    </section>
+
+    <section class="controls" aria-label="Search and filter">
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="search" type="search" placeholder="Search names, keywords, meanings…" autocomplete="off" aria-label="Search cards" />
+      </div>
+      <div class="chips" id="chips" role="tablist" aria-label="Filter by arcana or suit">
+        <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="chip" data-filter="Major" role="tab" aria-selected="false">Major Arcana</button>
+        <button class="chip" data-filter="Wands" role="tab" aria-selected="false">♣ Wands</button>
+        <button class="chip" data-filter="Cups" role="tab" aria-selected="false">♥ Cups</button>
+        <button class="chip" data-filter="Swords" role="tab" aria-selected="false">♠ Swords</button>
+        <button class="chip" data-filter="Pentacles" role="tab" aria-selected="false">♦ Pentacles</button>
+      </div>
+      <div class="controls-row">
+        <label class="sort-label">Sort
+          <select id="sort" aria-label="Sort cards">
+            <option value="deck">Deck order</option>
+            <option value="az">A – Z</option>
+          </select>
+        </label>
+        <button class="btn btn-gold" id="randomBtn">Draw a random card</button>
+      </div>
+    </section>
+
+    <p class="result-count" id="resultCount" aria-live="polite"></p>
+    <section class="grid" id="grid" aria-label="Cards"></section>
+    <div class="empty" id="empty" hidden>
+      <p class="empty-glyph">☾</p>
+      <p>No cards match your search.</p>
+      <button class="btn btn-ghost" id="resetBtn">Clear search &amp; filters</button>
+    </div>
+  </main>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalName" id="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <button class="modal-nav prev" id="modalPrev" aria-label="Previous card">‹</button>
+      <button class="modal-nav next" id="modalNext" aria-label="Next card">›</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Divine Insight Core · dataset <span id="footVersion"></span> · <a href="https://github.com/mal494/divine-insight-core" target="_blank" rel="noopener">View on GitHub</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
