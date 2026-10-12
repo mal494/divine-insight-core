@@ -57,6 +57,7 @@ No branch edits card data locally. Changes land here first.
 | Core | mal494/divine-insight-core | this repo: dataset, schema, platform plans |
 | Web | mal494/divine-insight-web | browser reading site with Stripe readings and tips |
 | Mobile | mal494/divine-insight-mobile | Android app |
+| Landing | mal494/divine-insight-landing | public marketing/landing site |
 | Studio | mal494/divine-insight-studio | Unity app, data model and scoring engine |
 | Academy | `academy/` here | learn to read tarot: lessons, practice, journal |
 | Shop | `shop/` here | decks, merch, digital goods |
