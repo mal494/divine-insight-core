@@ -5,8 +5,9 @@ The canonical 78-card tarot dataset and schema notes shared by every Divine Insi
 Core is the trunk of the platform. Web, Mobile and Studio all consume a versioned
 release of this repo rather than keeping their own copy of the card data. This
 repo is public so those branches can fetch a release at build time without a token.
-Core currently ships datasets, schema conventions, and planning docs; it does not
-yet include standalone validation tooling.
+Core ships the datasets, schema conventions, planning docs, and
+`scripts/validate_tarot_datasets.py`. GitHub Actions runs that script on every
+pull request and on every push to `main`.
 
 ## What's here
 
@@ -19,6 +20,8 @@ data/
 explorer/                # static dataset browser (index.html + app.js + styles.css)
 art/
   manifest.json          # slug -> artwork basename map for all 78 cards
+scripts/
+  validate_tarot_datasets.py  # schema, 78-card, and manifest checks for every release
 academy/
   CURRICULUM.md          # Academy lesson plan
 shop/
@@ -84,9 +87,15 @@ Arcana Path (mal494/tarot_game) is a sister brand, not a branch.
 
 ## License
 
-- Code and non-content documentation in this repository are licensed under the
-  MIT License (`LICENSE`).
-- Card text and dataset content (including `data/`, meanings, descriptions, and
-  similar content fields) are licensed under CC BY-NC 4.0 (`LICENSE-CONTENT`).
+- Code, scripts, and non-content documentation are under the MIT License
+  (`LICENSE`).
+- Original card text and dataset content — the files in `data/`, including
+  meanings, descriptions, and similar fields — are under CC BY-NC 4.0
+  (`LICENSE-CONTENT`). That license is a grant to other people. The copyright
+  holder can keep using this text in the paid Web, Mobile, and Studio products.
+- Rider-Waite-Smith images (Pamela Colman Smith, 1909) are public-domain source
+  material. They are not stored in this repository, and neither MIT nor
+  CC BY-NC is a copyright claim on them. `art/manifest.json` only maps a Core
+  slug to a filename.
 
 Copyright (c) 2026 Michael Lind.
