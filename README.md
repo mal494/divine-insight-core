@@ -14,11 +14,14 @@ data/
   tarot_data_v1.6.json   # previous dataset, kept as a backward-compatibility fixture
   tarot_data_v1.5.json   # older dataset, kept as a backward-compatibility fixture
   tarot_data_v1.4.json   # older dataset, kept as a backward-compatibility fixture
+explorer/                # static card browser (GitHub Pages)
 academy/                 # Academy plan: curriculum for learning to read tarot
 shop/                    # Shop plan: decks, merch and digital goods
+art/                     # artwork filename map (images live outside this repo)
 ```
 
 Academy and Shop live here as plans until either has running code of its own.
+The card explorer is a static page over the dataset; see below.
 
 ## Schema
 
@@ -33,6 +36,50 @@ Each card carries: key, number, slug, name, `short_description`, arcana, suit, e
 `astrology`, keywords,
 upright and reversed meanings, `elemental_weight`, `positional_weights`,
 `positional_text`, `tags`, and `life_domains`.
+
+## Card explorer
+
+`explorer/` is a static browser for the 78-card dataset: no build step and no
+dependencies. GitHub Pages serves it at
+`https://mal494.github.io/divine-insight-core/explorer/` (the landing page
+links there). Locally, serve the repo root and open `/explorer/`:
+
+```bash
+python3 -m http.server 8080
+# http://localhost:8080/explorer/
+```
+
+Opening `explorer/index.html` via `file://` fails. `fetch` of the dataset is
+blocked, and the page says it could not load the file.
+
+`explorer/app.js` loads a relative path:
+
+```js
+var DATASET_PATH = "../data/tarot_data_v1.6.1.json";
+```
+
+That file has to stay in sync with the current dataset name. When a release
+renames `tarot_data_vX.Y.json`, bump `DATASET_PATH` in the same change. The
+badge and footer read `deck_metadata.version` and `schema_version` from
+whatever file loaded.
+
+What the page does:
+
+- Search matches name, arcana, suit, element, astrology, `short_description`,
+  and upright and reversed keywords and descriptions. Input is debounced 160ms.
+- Filters: All, Major Arcana, Wands, Cups, Swords, Pentacles.
+- Sort: deck order (file order) or A–Z by name.
+- **Draw a random card** opens the detail modal for one card in the *filtered*
+  list, using `Math.random`.
+- The modal shows number, name, arcana or suit, element, astrology,
+  `short_description`, and upright and reversed keywords and descriptions.
+  Arrow keys and the on-screen arrows move within the filtered list. Escape
+  or a click on the backdrop closes it.
+- It does not show tags, life domains, positional text, or elemental weight.
+
+`prefers-reduced-motion: reduce` skips the twinkling canvas and the card-grid
+stagger. The HTML comment `pages-branch-verify` in `explorer/index.html` is a
+Pages deploy marker. The script does not read it.
 
 ## How branches consume Core
 

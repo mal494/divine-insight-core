@@ -30,8 +30,9 @@ All 78 slugs map to a unique file, verified against the dataset.
 ## Using it
 
 Web expects `/public/cards/<slug>.webp`. The conversion step is: take `720px/<basename>.jpg`
-from the manifest, convert to WebP, write it out named by slug. That replaces the
-glyph placeholders the site currently renders for most cards.
+from the manifest, convert to WebP, write it out named by slug. The Web repo
+already has those 78 slug-named files under `public/cards/`, plus
+`card-back.webp` and `card-back-rare.webp`.
 
 Shop's printable deck and guidebook PDF should pull from `full/` instead.
 
