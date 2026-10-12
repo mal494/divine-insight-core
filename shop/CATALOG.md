@@ -23,8 +23,9 @@ No upfront inventory. A supplier prints and ships per order.
 2. Poster of the full 78-card deck
 3. Apparel with card imagery
 
-Blocked on artwork: Web currently renders glyph placeholders for most cards
-(`src/data/artwork.ts` in mal494/DI). Art is the real dependency here, not code.
+Artwork baseline is in place: Web now ships all 78 card artworks
+(`mal494/divine-insight-web`). Remaining dependency is preparing print-ready
+assets and templates for physical products.
 
 ## Physical deck
 
