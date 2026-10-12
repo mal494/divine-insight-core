@@ -29,9 +29,11 @@ All 78 slugs map to a unique file, verified against the dataset.
 
 ## Using it
 
-Web expects `/public/cards/<slug>.webp`. The conversion step is: take `720px/<basename>.jpg`
-from the manifest, convert to WebP, write it out named by slug. That replaces the
-glyph placeholders the site currently renders for most cards.
+Web serves `/cards/<slug>.webp` from `public/cards/`. The conversion step is: take `720px/<basename>.jpg`
+from the manifest, convert to WebP, and write it named by Core slug. Divine Insight Web already
+ships those 78 files, plus `public/cards/card-back.webp` and `public/cards/card-back-rare.webp`.
+`src/data/artwork.ts` builds `ART_IDS` from every generated deck id (the slug). `artUrlFor`
+returns `/cards/<id>.webp` for those ids and `null` otherwise, and the face falls back to its glyph.
 
 Shop's printable deck and guidebook PDF should pull from `full/` instead.
 
