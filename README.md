@@ -84,4 +84,9 @@ Arcana Path (mal494/tarot_game) is a sister brand, not a branch.
 
 ## License
 
-TBD (pending Michael's decision).
+- Code and non-content documentation in this repository are licensed under the
+  MIT License (`LICENSE`).
+- Card text and dataset content (including `data/`, meanings, descriptions, and
+  similar content fields) are licensed under CC BY-NC 4.0 (`LICENSE-CONTENT`).
+
+Copyright (c) 2026 Michael Lind.
