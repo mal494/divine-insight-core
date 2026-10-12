@@ -31,15 +31,48 @@ CHANGELOG.md             # dataset and schema release notes
 
 Academy and Shop live here as plans until either has running code of its own.
 
-### Serving the explorer locally
+### Card explorer
 
-The explorer reads `../data/tarot_data_v1.6.1.json`, so serve the repo root over HTTP:
+`explorer/` is a static browser for the current dataset: no build step. Serve the repo root over HTTP and open `/explorer/`:
 
 ```bash
 python3 -m http.server 4173
+# http://localhost:4173/explorer/
 ```
 
-Then open `http://localhost:4173/explorer/`.
+Opening `explorer/index.html` as a `file://` URL fails. `fetch` of the dataset is blocked, and the page reports that it could not load the file.
+
+`explorer/app.js` loads one relative path:
+
+```js
+var DATASET_PATH = "../data/tarot_data_v1.6.1.json";
+```
+
+When a release renames `tarot_data_vX.Y.json`, change `DATASET_PATH` in the same commit. The badge and footer show `deck_metadata.version` and `schema_version` from whatever file loaded.
+
+The page searches name, arcana, suit, element, astrology, `short_description`, and upright and reversed keywords and descriptions. Search input is debounced 160ms. Filters are All, Major Arcana, Wands, Cups, Swords, and Pentacles. Sort is file order or A–Z by name. **Draw a random card** opens one card from the filtered list (`Math.random`). The modal shows number, name, arcana or suit, element, astrology, `short_description`, and upright and reversed keywords and descriptions. Arrow keys move inside the filtered list. Escape or a click on the backdrop closes it. Tags, life domains, positional text, and elemental weight are not shown.
+
+`prefers-reduced-motion: reduce` skips the twinkling canvas and the card-grid stagger. The HTML comment `pages-branch-verify` in `explorer/index.html` is a Pages deploy marker. The script does not read it.
+
+## Validating datasets
+
+`scripts/validate_tarot_datasets.py` checks every `data/tarot_data_v*.json` and `art/manifest.json`. It takes no arguments. GitHub Actions runs it on every pull request and every push to `main` (`.github/workflows/validate-datasets.yml`, Python 3.12). Locally:
+
+```bash
+python3 scripts/validate_tarot_datasets.py
+```
+
+Exit 0 prints the file count and the versions it saw. Exit 1 prints `Dataset validation failed:` and one bullet per problem. The script needs Python 3.10 or newer (`list[str]`, `Any | None`).
+
+What it requires:
+
+- `data/` contains `tarot_data_v1.4.json`, `v1.5.json`, `v1.6.json`, and `v1.6.1.json`. Any other `tarot_data_v*.json` in that directory is checked too.
+- Each file has `deck_metadata`, `taxonomy`, and `cards`. `deck_metadata.schema_version` equals the version in the filename. `total_cards` is 78 and `cards` has 78 objects.
+- `art/manifest.json` `cards` has exactly 78 kebab-case slug keys, each with a non-empty asset id. Every dataset's slugs match that set exactly. Duplicate slugs fail.
+- Schema 1.6 and 1.6.1 cards must have a non-empty `short_description`. Older files are not required to have that field, and the script does not reject it if they do.
+- `id` equals `key`. `arcana` is `Major` or `Minor`. Major cards have `suit: null`, `card_type` `Major Arcana`, and `number` 0–21. Minor cards use suit Wands, Cups, Swords, or Pentacles, `number` 1–14, and `card_type` `Pip Card` (1–10) or `Court Card` (11–14).
+- `element` and each `life_domains` entry are in that file's taxonomy. `elemental_weight` is a number. The script does not check that it is between 0 and 1.
+- Upright and reversed meanings have a non-empty keyword list and a non-empty description. `positional_weights` and `positional_text` include `past`, `obstacle`, `present`, `future`, `advice`, and `hopes_fears`.
 
 ## Schema
 
@@ -68,8 +101,10 @@ No branch edits card data locally. Changes land here first.
 
 1. Add the new `tarot_data_vX.Y.json` under `data/`.
 2. Keep the previous version in place as a backward-compatibility fixture.
-3. Record the change in CHANGELOG.md.
-4. Tag a release so downstream branches can pin it.
+3. Add the new version to `EXPECTED_DATASET_VERSIONS` in `scripts/validate_tarot_datasets.py` when it should be required, and point `explorer/app.js` `DATASET_PATH` at the file the explorer should open.
+4. Run `python3 scripts/validate_tarot_datasets.py`.
+5. Record the change in CHANGELOG.md.
+6. Tag a release so downstream branches can pin it.
 
 ## Branches of the platform
 
