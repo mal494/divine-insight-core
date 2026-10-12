@@ -7,15 +7,11 @@ Academy is the front door of the platform. It brings people in before they want
 to pay for a reading, and everything it teaches is grounded in Core data rather
 than a separate pile of lesson copy.
 
-## Pinned to Core
+## Core alignment
 
-```
-core.version = v1.5
-```
-
-`data/tarot_data_v1.5.json` is a vendored copy of the Core v1.5 release:
-
-https://github.com/mal494/divine-insight-core
+Academy is planned inside the Core repo right now, so it reads directly from this
+repo's versioned dataset files under `data/` (currently `v1.6.1`; see `CHANGELOG.md`).
+There is no separate vendored Academy copy of Core data yet.
 
 Card meanings, keywords, elements, astrology, tags, life domains and position
 text all come from Core. See CORE.md for the rules.

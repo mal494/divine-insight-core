@@ -1,0 +1,18 @@
+Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+
+Copyright (c) 2026 Michael Lind
+
+Original card text and dataset content in this repository are licensed under
+CC BY-NC 4.0. This includes files in `data/` and card meanings, descriptions,
+and similar textual dataset content.
+
+This license does not cover Rider-Waite-Smith card images. Those images are
+public-domain source material (Pamela Colman Smith, 1909), they are not stored
+in this repository, and this project does not claim copyright in them.
+`art/manifest.json` is a filename map only.
+
+CC BY-NC 4.0 is a grant to other people. The copyright holder may still use
+this text in commercial Divine Insight products.
+
+License deed: https://creativecommons.org/licenses/by-nc/4.0/
+Full legal code: https://creativecommons.org/licenses/by-nc/4.0/legalcode

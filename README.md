@@ -1,10 +1,13 @@
 # Divine Insight Core
 
-The canonical 78-card tarot dataset and schema shared by every Divine Insight branch.
+The canonical 78-card tarot dataset and schema notes shared by every Divine Insight branch.
 
 Core is the trunk of the platform. Web, Mobile and Studio all consume a versioned
 release of this repo rather than keeping their own copy of the card data. This
 repo is public so those branches can fetch a release at build time without a token.
+Core ships the datasets, schema conventions, planning docs, and
+`scripts/validate_tarot_datasets.py`. GitHub Actions runs that script on every
+pull request and on every push to `main`.
 
 ## What's here
 
@@ -14,11 +17,29 @@ data/
   tarot_data_v1.6.json   # previous dataset, kept as a backward-compatibility fixture
   tarot_data_v1.5.json   # older dataset, kept as a backward-compatibility fixture
   tarot_data_v1.4.json   # older dataset, kept as a backward-compatibility fixture
-academy/                 # Academy plan: curriculum for learning to read tarot
-shop/                    # Shop plan: decks, merch and digital goods
+explorer/                # static dataset browser (index.html + app.js + styles.css)
+art/
+  manifest.json          # slug -> artwork basename map for all 78 cards
+scripts/
+  validate_tarot_datasets.py  # schema, 78-card, and manifest checks for every release
+academy/
+  CURRICULUM.md          # Academy lesson plan
+shop/
+  CATALOG.md             # Shop product plan
+CHANGELOG.md             # dataset and schema release notes
 ```
 
 Academy and Shop live here as plans until either has running code of its own.
+
+### Serving the explorer locally
+
+The explorer reads `../data/tarot_data_v1.6.1.json`, so serve the repo root over HTTP:
+
+```bash
+python3 -m http.server 4173
+```
+
+Then open `http://localhost:4173/explorer/`.
 
 ## Schema
 
@@ -63,3 +84,18 @@ No branch edits card data locally. Changes land here first.
 | Shop | `shop/` here | decks, merch, digital goods |
 
 Arcana Path (mal494/tarot_game) is a sister brand, not a branch.
+
+## License
+
+- Code, scripts, and non-content documentation are under the MIT License
+  (`LICENSE`).
+- Original card text and dataset content — the files in `data/`, including
+  meanings, descriptions, and similar fields — are under CC BY-NC 4.0
+  (`LICENSE-CONTENT`). That license is a grant to other people. The copyright
+  holder can keep using this text in the paid Web, Mobile, and Studio products.
+- Rider-Waite-Smith images (Pamela Colman Smith, 1909) are public-domain source
+  material. They are not stored in this repository, and neither MIT nor
+  CC BY-NC is a copyright claim on them. `art/manifest.json` only maps a Core
+  slug to a filename.
+
+Copyright (c) 2026 Michael Lind.
