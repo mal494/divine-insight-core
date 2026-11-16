@@ -41,6 +41,18 @@ python3 -m http.server 4173
 
 Then open `http://localhost:4173/explorer/`.
 
+`explorer/app.js` loads a hardcoded `DATASET_PATH` (`../data/tarot_data_v1.6.1.json`). It does not read a version file. Opening `explorer/index.html` as a local file fails the `fetch`, and the page tells you to serve it over http(s). Bump `DATASET_PATH` when the current dataset filename changes.
+
+## Validating a change
+
+```bash
+python3 scripts/validate_tarot_datasets.py
+```
+
+Exit `0` prints the versions it checked. Exit `1` lists every problem. The `Validate tarot datasets` workflow runs this on pull requests and on pushes to `main` (Python 3.12).
+
+The script requires `data/tarot_data_v1.4.json`, `v1.5`, `v1.6`, and `v1.6.1`. Each file's `schema_version` must equal the version in its filename, and the file must contain 78 unique kebab-case slugs that match `art/manifest.json` exactly. `short_description` is required and must be non-empty on 1.6 and 1.6.1 only. Any other `data/tarot_data_v*.json` is validated the same way; a missing expected version is an error.
+
 ## Schema
 
 Schema 1.6.1 is a data-only patch on 1.6: no card fields change. It swaps the Queen and
